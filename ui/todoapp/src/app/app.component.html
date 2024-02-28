@@ -1,0 +1,18 @@
+<div class="todo-app">
+  <div class="text-center">
+    <h2>Angular Todo App</h2>
+  </div>
+  <div class="input-group">
+    <input type="text" id="newNotes" placeholder="Add a new note" />
+    <button (click)="addNotes()">Add</button>
+  </div>
+
+  <div class="notes-list">
+    <div class="note" *ngFor="let note of notes">
+      <span>{{ note.description }}</span>
+      <button (click)="deleteNotes(note.id)">Delete</button>
+    </div>
+  </div>
+
+  <footer>Made by Adam V</footer>
+</div>
